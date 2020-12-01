@@ -2,13 +2,17 @@ package com.rodrigoespeso.dp.factory;
 
 public class PersonFactory {
 	
-	public static Person create(String gender) {
+	public enum Gender {
+		MALE, FEMALE
+	}
+	
+	public static Person create(Gender gender) {
 		Person person = null;
 
-		if ("male".equals(gender)) {
+		if (Gender.MALE.equals(gender)) {
 			person = new Male();
 		}
-		if ("female".equals(gender)) {
+		if (Gender.FEMALE.equals(gender)) {
 			person = new Female();
 		}
 
