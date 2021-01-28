@@ -8,7 +8,6 @@ package com.rodrigoespeso.dpatterns.creational.builder;
  */
 public class ComputerBuilder {
 
-	public static class Builder {
 		// same attributes as Computer
 		private String computerCase;
 		private String CPU;
@@ -19,42 +18,42 @@ public class ComputerBuilder {
 		private int powerSupply;
 		private int amountOfRAM;
 
-		public Builder withCase(String computerCase) {
+		public ComputerBuilder withComputerCase(String computerCase) {
 			this.computerCase = computerCase;
 			return this;
 		}
 
-		public Builder withCPU(String CPU) {
+		public ComputerBuilder withCPU(String CPU) {
 			this.CPU = CPU;
 			return this;
 		}
 
-		public Builder withMotherboard(String motherboard) {
+		public ComputerBuilder withMotherboard(String motherboard) {
 			this.motherboard = motherboard;
 			return this;
 		}
 
-		public Builder withGPU(String GPU) {
+		public ComputerBuilder withGPU(String GPU) {
 			this.GPU = GPU;
 			return this;
 		}
 
-		public Builder withHDD(String HDD) {
+		public ComputerBuilder withHDD(String HDD) {
 			this.HDD = HDD;
 			return this;
 		}
 
-		public Builder withOperatingSystem(String operatingSystem) {
+		public ComputerBuilder withOperatingSystem(String operatingSystem) {
 			this.operatingSystem = operatingSystem;
 			return this;
 		}
 
-		public Builder withPowerSupply(int powerSupply) {
+		public ComputerBuilder withPowerSupply(int powerSupply) {
 			this.powerSupply = powerSupply;
 			return this;
 		}
 
-		public Builder withAmountOfRam(int amountOfRAM) {
+		public ComputerBuilder withAmountOfRam(int amountOfRAM) {
 			this.amountOfRAM = amountOfRAM;
 			return this;
 		}
@@ -72,9 +71,5 @@ public class ComputerBuilder {
 
 			return computer;
 		}
-	}
-	
-	private ComputerBuilder() {
-		// nothing here
-	}
+
 }

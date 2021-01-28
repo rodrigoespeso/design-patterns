@@ -9,7 +9,7 @@ package com.rodrigoespeso.dpatterns.creational.builder;
  */
 public class Smartphone {
 
-	public class Builder {
+	public static class Builder {
 		/*
 		 * The same attributes as the object to be build
 		 */
@@ -173,4 +173,82 @@ public class Smartphone {
 		this.batteryAmperage = batteryAmperage;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((backCameraMPixels == null) ? 0 : backCameraMPixels.hashCode());
+		result = prime * result + ((batteryAmperage == null) ? 0 : batteryAmperage.hashCode());
+		result = prime * result + ((brand == null) ? 0 : brand.hashCode());
+		result = prime * result + ((frontCameraMPixels == null) ? 0 : frontCameraMPixels.hashCode());
+		result = prime * result + (isSecondHand ? 1231 : 1237);
+		result = prime * result + ((osVersion == null) ? 0 : osVersion.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
+		result = prime * result + ((ramMemory == null) ? 0 : ramMemory.hashCode());
+		result = prime * result + ((screenSizeInches == null) ? 0 : screenSizeInches.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Smartphone other = (Smartphone) obj;
+		if (backCameraMPixels == null) {
+			if (other.backCameraMPixels != null)
+				return false;
+		} else if (!backCameraMPixels.equals(other.backCameraMPixels))
+			return false;
+		if (batteryAmperage == null) {
+			if (other.batteryAmperage != null)
+				return false;
+		} else if (!batteryAmperage.equals(other.batteryAmperage))
+			return false;
+		if (brand == null) {
+			if (other.brand != null)
+				return false;
+		} else if (!brand.equals(other.brand))
+			return false;
+		if (frontCameraMPixels == null) {
+			if (other.frontCameraMPixels != null)
+				return false;
+		} else if (!frontCameraMPixels.equals(other.frontCameraMPixels))
+			return false;
+		if (isSecondHand != other.isSecondHand)
+			return false;
+		if (osVersion == null) {
+			if (other.osVersion != null)
+				return false;
+		} else if (!osVersion.equals(other.osVersion))
+			return false;
+		if (price == null) {
+			if (other.price != null)
+				return false;
+		} else if (!price.equals(other.price))
+			return false;
+		if (ramMemory == null) {
+			if (other.ramMemory != null)
+				return false;
+		} else if (!ramMemory.equals(other.ramMemory))
+			return false;
+		if (screenSizeInches == null) {
+			if (other.screenSizeInches != null)
+				return false;
+		} else if (!screenSizeInches.equals(other.screenSizeInches))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Smartphone [brand=" + brand + ", price=" + price + ", screenSizeInches=" + screenSizeInches
+				+ ", frontCameraMPixels=" + frontCameraMPixels + ", backCameraMPixels=" + backCameraMPixels
+				+ ", isSecondHand=" + isSecondHand + ", ramMemory=" + ramMemory + ", osVersion=" + osVersion
+				+ ", batteryAmperage=" + batteryAmperage + "]";
+	}
+	
 }
