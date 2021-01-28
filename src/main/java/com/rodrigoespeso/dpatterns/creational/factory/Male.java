@@ -1,4 +1,4 @@
-package com.rodrigoespeso.dp.factory;
+package com.rodrigoespeso.dpatterns.creational.factory;
 
 public class Male implements Person {
 

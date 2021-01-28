@@ -1,7 +1,14 @@
-package com.rodrigoespeso.dp.singleton;
+package com.rodrigoespeso.dpatterns.creational.singleton;
 
 import java.io.Serializable;
 
+/**
+ * Implementation of a logger class as a singleton example.
+ * The Singleton pattern ensures the existence of only one object instance in the whole JVM.
+ * 
+ * @author Rodrigo Espeso
+ *
+ */
 public class Logger implements Serializable, Cloneable {
 
 	private static final long serialVersionUID = 1L;

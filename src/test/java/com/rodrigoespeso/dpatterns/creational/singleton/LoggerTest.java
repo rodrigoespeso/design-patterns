@@ -1,4 +1,4 @@
-package com.rodrigoespeso.dp.singleton;
+package com.rodrigoespeso.dpatterns.creational.singleton;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -16,6 +16,8 @@ import java.io.PrintStream;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.rodrigoespeso.dpatterns.creational.singleton.Logger;
 
 public class LoggerTest {
 	
